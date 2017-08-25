@@ -12,14 +12,14 @@ import java.io.IOException;
 
 /**
  *
- * @author DEJI
+ * @author BetaTeam
  */
 public class LineCounter {
     static int total = 0;
     //The counter's check covers single line comments and empty lines only.
     //Empty line comments are excluded as they MAY be commented part of written codes
     public static void main(String[] args) throws IOException{
-        File dir = new File("C://Users/DEJI/Documents/NetBeansProjects/NESTlab/src/nestlab");
+        File dir = new File("C://Users/DEJI/Documents/NetBeansProjects/NESTlab/src/nestlab"); //replace with path to your project's source package
         File[] files = dir.listFiles();
         for(File javaFile : files){
             if(javaFile.getName().endsWith(".java")){
