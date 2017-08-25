@@ -17,22 +17,15 @@ import java.util.regex.Pattern;
  *
  * @author DEJI
  */
+/*The sentence.java file reads contents from lessig-court-transcript.txt file.
+Add lessig-court-transcript.txt to your project parent directory or specify it's path in sentence.java so as to read from it
+*/
 public class Sentences {
     public static void main(String[] args) throws FileNotFoundException{
-        /*BreakIterator iterator = BreakIterator.getSentenceInstance(Locale.UK);
-        String source = "This is a test. Mr. Dayne this is a T.L.A. test. Now with a Dr. in it.";
-        iterator.setText(source);
-        int start = iterator.first();
-        for (int end = iterator.next();
-            end != BreakIterator.DONE;
-            start = end, end = iterator.next()) {
-          System.out.println(source.substring(start,end));
-        }*/
         String sResult = "This is a test. Mr, Dayne, this is a T.L.A. test.";
         Scanner output = new Scanner(new FileReader("Lessig-court-transcript.txt"));
         while(output.hasNext()){
         String Result = output.nextLine();
-        //String[] splitted = sResult.split(" ");
         String[] sSentence = Result.split("(?<=[a-z])\\.\\,\\s+");
         for(int i=0;i<sSentence.length;i++){
             //if statement conditions to check for presence of titles.
